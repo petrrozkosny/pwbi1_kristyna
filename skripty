@@ -102,12 +102,11 @@ CONCATENATEX(
     data[srazky] = MAX(data[srazky])),
 data[datum],", ")
 _____________________________________________________
-
 10 pocet tropickych dnu ruzyne = 
 
 -- v danem roce v lokalite ruzyne, maximalni_teplota > 30
-
+MAX(0,
 COUNTX(
     FILTER(data,data[lokalita] = "RUZYNE"
     && data[maximalni_teplota] > 30),
-data[datum])
+data[datum]))

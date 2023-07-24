@@ -150,3 +150,12 @@ _________________________________________________________________________
 -- na radcich zobrazujeme NIC
 IF(ISFILTERED(data[rok]), BLANK(),
 MIN(data[minimalni_teplota]))
+
+_______________________________________________
+
+15 nejteplejsi lokality = 
+-- lokality, ktere v danem roce vykazaly maximum z maximalnich teplot
+
+CONCATENATEX(
+    FILTER(data,data[maximalni_teplota] = MAX(data[maximalni_teplota])),
+data[lokalita],", ")

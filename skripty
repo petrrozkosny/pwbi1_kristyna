@@ -159,3 +159,12 @@ _______________________________________________
 CONCATENATEX(
     FILTER(data,data[maximalni_teplota] = MAX(data[maximalni_teplota])),
 data[lokalita],", ")
+
+___________________________________________________
+
+16 suma srazek kumulativne = 
+SUMX(
+    FILTER(
+        ALL(data),
+    data[rok] <= MAX(data[rok])),
+data[srazky])

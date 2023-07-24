@@ -210,3 +210,10 @@ cv02 minimalni datum vse =
 MINX(
     ALL(data),
 data[datum])
+
+__________________________________________
+
+cv03 minimalni datum ruzyne = 
+MINX(
+    FILTER(data,data[lokalita] = "RUZYNE"),
+data[datum])

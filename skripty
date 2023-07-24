@@ -69,3 +69,10 @@ SUMX(
     data[rok] = MAX(data[rok])-1),
 -- krok4: Agregace sloupce srazky tabulky vracene funkci FILTER()
 data[srazky])
+
+___________________________________________
+
+06 suma srazek sedmy mesic = 
+SUMX(
+    FILTER(data,data[mesic] = 7),
+data[srazky])

@@ -93,3 +93,11 @@ MINX(
     FILTER(data,
     data[srazky] = MAX(data[srazky])),
 data[datum])
+
+____________________________________________________
+
+09 datumy maximalnich srazek = 
+CONCATENATEX(
+    FILTER(data,
+    data[srazky] = MAX(data[srazky])),
+data[datum],", ")

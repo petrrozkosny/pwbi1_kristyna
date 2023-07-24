@@ -110,3 +110,19 @@ COUNTX(
     FILTER(data,data[lokalita] = "RUZYNE"
     && data[maximalni_teplota] > 30),
 data[datum]))
+
+_________________________________________________________
+
+11 suma srazek mezirocne = 
+
+-- suma srazek v danem roce
+SUM(data[srazky])
+-- MÍNUS
+-
+-- suma srazek v predchozim roce
+SUMX(
+    FILTER(
+        ALL(data),
+    data[rok] = MAX(data[rok]) - 1),
+data[srazky])
+

@@ -55,3 +55,17 @@ SUMX(
 data[srazky])
 
 _______________________________
+
+
+05 suma srazek predchozi rok = 
+-- scenar 4
+SUMX(
+    -- krok2: Funkce FILTER() nastavuje filtr na tabulku vracenou funkci ALL()
+    FILTER(
+        --krok1: Funkce ALL() vraci kopii tabulky data zbavenou vsech filtru
+        ALL(data),
+    -- krok 3: Vypocet hodnoty, na kterou filtrujeme. Hodnotu
+    -- pocitame z originalni (vizualem filtrovane) tabulky data
+    data[rok] = MAX(data[rok])-1),
+-- krok4: Agregace sloupce srazky tabulky vracene funkci FILTER()
+data[srazky])

@@ -133,3 +133,12 @@ __________________________________________________________________
 COUNTX(
     FILTER(data,data[lokalita] = "RUZYNE"),
 data[datum])
+
+_____________________________________________________________________
+
+13 maximalni teplota v danem roce v ruzyne = 
+
+MAXX(
+    FILTER(data,
+    data[lokalita] = "RUZYNE"),
+data[maximalni_teplota])

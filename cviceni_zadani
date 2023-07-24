@@ -11,6 +11,7 @@ cv08 suma srazek kumulativne: Suma srážek v daném roce, v měsících rovnaj�
 cv09 pocet tropickych dnu ruzyne: Počet datumů v daném měsíci a roce, kdy v lokalitě RUZYNE byla maximalni_teplota > 30
 
 cvbonus1: Byla WIEN nejteplejší lokalitou? ANO/NE. V daném měsíci a roce
+cvbonus2: Lokality, ve kterých v daném roce a měsíci napadly největší srážky (největší suma srážek)
 
 =======================================================================================================================
 

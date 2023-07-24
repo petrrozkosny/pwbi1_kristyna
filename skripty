@@ -83,3 +83,13 @@ ___________________________________________
 -- tj. jaka je maximalni hodnota ze sloupce srazky
 -- v danem roce
 max(data[srazky])
+
+_______________________________________________
+
+08 prvni den maximalnich srazek = 
+-- v danem roce
+
+MINX(
+    FILTER(data,
+    data[srazky] = MAX(data[srazky])),
+data[datum])

@@ -217,3 +217,16 @@ cv03 minimalni datum ruzyne =
 MINX(
     FILTER(data,data[lokalita] = "RUZYNE"),
 data[datum])
+
+_______________________________________________
+
+cv05 min datum predchozi rok = 
+
+MINX(
+-- stejny mesic
+FILTER(
+    -- kopie tabulky data
+    ALL(data),
+    data[mesic] = MAX(data[mesic])
+    && data[rok] = MAX(data[rok]) - 1) ,
+data[datum])

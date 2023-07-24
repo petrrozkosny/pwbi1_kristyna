@@ -125,4 +125,11 @@ SUMX(
         ALL(data),
     data[rok] = MAX(data[rok]) - 1),
 data[srazky])
+__________________________________________________________________
 
+12  pocet dnu ruzyne = 
+-- pocet hodnot ze sloupce datum tabulky data filtrovane 
+-- pres lokalitu na RUZYNE. Respektujeme filtr vizualu
+COUNTX(
+    FILTER(data,data[lokalita] = "RUZYNE"),
+data[datum])

@@ -142,3 +142,11 @@ MAXX(
     FILTER(data,
     data[lokalita] = "RUZYNE"),
 data[maximalni_teplota])
+
+_________________________________________________________________________
+
+14 minimalni teplota = 
+-- pocítame hodnotu pouze pro total, tj. 
+-- na radcich zobrazujeme NIC
+IF(ISFILTERED(data[rok]), BLANK(),
+MIN(data[minimalni_teplota]))

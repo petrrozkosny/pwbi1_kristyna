@@ -168,3 +168,12 @@ SUMX(
         ALL(data),
     data[rok] <= MAX(data[rok])),
 data[srazky])
+
+_______________________________________________________________
+
+17 prvni datum ruzyne = 
+-- v danem roce 
+MINX(
+    FILTER(data,
+    data[lokalita] = "RUZYNE"),
+data[datum])

@@ -202,3 +202,11 @@ ______________________________________________________
 SUMX(
     FILTER(data,data[lokalita] = "RUZYNE"),
 data[srazky])
+
+________________________________
+
+cv02 minimalni datum vse = 
+
+MINX(
+    ALL(data),
+data[datum])

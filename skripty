@@ -76,3 +76,10 @@ ___________________________________________
 SUMX(
     FILTER(data,data[mesic] = 7),
 data[srazky])
+
+___________________________________________
+
+07 maximalni srazky v danem roce = 
+-- tj. jaka je maximalni hodnota ze sloupce srazky
+-- v danem roce
+max(data[srazky])

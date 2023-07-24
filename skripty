@@ -182,3 +182,23 @@ ____________________________________________________________
 
 18 suma srazek v danem roce a mesici = 
 SUM(data[srazky])
+
+
+_______________________________________________
+
+19 suma srazek ytd = 
+-- kumulativne v danem roce
+
+SUMX(
+    FILTER(ALL(data),
+    data[rok] = MAX(data[rok])
+    && data[mesic] <= MAX(data[mesic])),
+data[srazky])
+
+______________________________________________________
+20 suma srazek ruzyne = 
+-- v danem mesici, roce
+
+SUMX(
+    FILTER(data,data[lokalita] = "RUZYNE"),
+data[srazky])

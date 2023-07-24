@@ -177,3 +177,8 @@ MINX(
     FILTER(data,
     data[lokalita] = "RUZYNE"),
 data[datum])
+
+____________________________________________________________
+
+18 suma srazek v danem roce a mesici = 
+SUM(data[srazky])

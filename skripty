@@ -263,3 +263,11 @@ MAXX(
         data,
     data[srazky] = MAX(data[srazky])),
 data[datum])
+
+___________________________________________
+
+cvbonus3 datumy max srazek = 
+CONCATENATEX(
+    FILTER(data,
+    data[maximalni_teplota] = MAX(data[maximalni_teplota])),
+data[datum],", ",data[datum],ASC)

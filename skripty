@@ -230,3 +230,19 @@ FILTER(
     data[mesic] = MAX(data[mesic])
     && data[rok] = MAX(data[rok]) - 1) ,
 data[datum])
+
+____________________________________
+
+cv11 podil srazek lokalita = 
+
+
+-- suma srazek v danem roce a lokalite
+SUM(data[srazky])
+-- DELENO
+/
+-- suma srazek v danem roce, vsech lokalitach
+SUMX(
+    FILTER(
+        ALL(data),
+    data[rok] = MAX(data[rok])),
+data[srazky])

@@ -303,3 +303,22 @@ SUMX(
 -- tabulky vrácené funkcí FILTER()
 data[srazky])
 
+
+____________________________________________________________
+
+
+28 pf barva sloupce srazky mezirocne = 
+
+-- suma srazek v danem roce, mesici, lokalite
+SUM(data[srazky])
+-
+-- MÍNUS
+-- suma srazek v predchozim roce, danem mesici a lokalite
+SUMX(
+    FILTER(
+        ALL(data),
+    data[rok] = SELECTEDVALUE(data[rok])-1
+    && data[mesic] = SELECTEDVALUE(data[mesic])
+    && data[lokalita] IN VALUES(data[lokalita])),
+data[srazky])
+

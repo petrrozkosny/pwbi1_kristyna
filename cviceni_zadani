@@ -13,15 +13,23 @@ cv09 pocet tropickych dnu ruzyne: Počet datumů v daném měsíci a roce, kdy v
 cvbonus1: Byla WIEN nejteplejší lokalitou? ANO/NE. V daném měsíci a roce
 cvbonus2: Lokality, ve kterých v daném roce a měsíci napadly největší srážky (největší suma srážek)
 
+Vizuál typu tabulka se sloupci data[lokalita], data[rok]
+cv10 suma srazek: Suma srážek v dané lokalitě, roce
+cv11 podil srazek lokalita: Podíl sumy srážek dané lokality v daném roce na sumě srážek všech lokalit v daném roce
+cv12 maximalni srazky: Maximální srážky dané lokality v daném roce
+cv13 maximalni datum maximalnich srazek: Maximální (tj. poslední) datum dané lokality, ve kterém napadly maximální srážky dané lokality v daném roce
+
+cvbonus3: datumy maximalnich teplot: Výpis všech datumů dané lokality, ve kterých byla naměřena maximální teplota v dané lokalitě, roce
+
 =======================================================================================================================
 
 Vizuál typu průřez s hodnotami z data[lokalita] (omezit na jediný výběr)
 Vizuál typu průřez s hodnotami z data[rok] (omezit na jediný výběr)
 Vizuál typu skládaný sloupcový graf:
-cv10 maximalni teplota: Maximální teplota v daném měsici, roce, lokalitě
-cv11 pf maximalni teplota: Pokud se maximální teplota v daném měsíci, roce a lokalitě rovná maximální
+cv14 maximalni teplota: Maximální teplota v daném měsici, roce, lokalitě
+cv15 pf maximalni teplota: Pokud se maximální teplota v daném měsíci, roce a lokalitě rovná maximální
 teplotě v dané lokalitě a roce (bez ohledu na měsíc), barva "tomato"
-cv12 pf nazev grafu: Vývoj maximální teploty v roce {vybraný rok} a lokalitě {vybraná lokalita}
+cv16 pf nazev grafu: Vývoj maximální teploty v roce {vybraný rok} a lokalitě {vybraná lokalita}
 
 Stránka typu popis dosazená na sloupcový graf, popis bude obsahovat vizuál typu tabulka a do ní dosazeno
 data[datum]

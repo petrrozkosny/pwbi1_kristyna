@@ -322,3 +322,18 @@ SUMX(
     && data[lokalita] IN VALUES(data[lokalita])),
 data[srazky])
 
+___________________________________________________________________
+
+29 pf barva sloupce max teplota = 
+IF(
+-- maximalni teplota v danem roce,mesici, lokalitach
+MAX(data[maximalni_teplota])
+=
+-- maximalni teplota v danem roce, lokalitach, vsech mesicich
+MAXX(
+    FILTER(
+        ALL(data),
+    data[lokalita] in VALUES(data[lokalita])
+    && data[rok] = SELECTEDVALUE(data[rok])),
+data[maximalni_teplota]),"TOMATO")
+

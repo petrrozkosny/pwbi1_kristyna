@@ -246,3 +246,7 @@ SUMX(
         ALL(data),
     data[rok] = MAX(data[rok])),
 data[srazky])
+
+__________________________________
+
+cv12 maximalni srazky = MAX(data[srazky])

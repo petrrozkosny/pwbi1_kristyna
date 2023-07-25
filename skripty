@@ -250,3 +250,16 @@ data[srazky])
 __________________________________
 
 cv12 maximalni srazky = MAX(data[srazky])
+
+____________________________________
+
+
+cv13 maximalni datum maximalnich srazek = 
+
+-- v danem roce, lokalite
+
+MAXX(
+    FILTER(
+        data,
+    data[srazky] = MAX(data[srazky])),
+data[datum])

@@ -271,3 +271,35 @@ CONCATENATEX(
     FILTER(data,
     data[maximalni_teplota] = MAX(data[maximalni_teplota])),
 data[datum],", ",data[datum],ASC)
+
+___________________________________________________
+
+25 suma srazek kumulativne = 
+-- ve vybranem roce, lokalitach
+
+/*
+Míru dosazujeme do vizuálu filtrovaného přes sloupce
+rok,mesic,lokalita.
+Chceme upravit filtr nad měsícem, tj. scénář 4
+*/
+SUMX(
+    -- krok2: Funkce FILTER() nastavuje filtry
+    -- na sloupce tabulky vrácené funkcí ALL()
+    FILTER(
+        --krok1: Funkce ALL() vrátí kopii
+        -- tabulky data zbavenou všech filtrů.
+        ALL(data),
+    -- krok2: Rok tabulky vrácené funkcí ALL()
+    -- se rovná vybranému roku z originální tabulky data
+    -- filtrované vizuálem
+    data[rok] = SELECTEDVALUE(data[rok])
+    && data[mesic] <= SELECTEDVALUE(data[mesic])
+    --krok2: Lokalita z tabulky vrácené funkcí ALL()
+    -- se rovná jedné z lokalit vrácené funkcí VALUES(),
+    -- která vrací unikátní hodnoty ze sloupce lokalita,
+    -- tabulky data filtrované vizuálem
+    && data[lokalita] IN VALUES(data[lokalita])),
+-- krok3: Funkce SUMX() sčítá hodnoty ze sloupce srazky
+-- tabulky vrácené funkcí FILTER()
+data[srazky])
+

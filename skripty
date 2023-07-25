@@ -337,3 +337,20 @@ MAXX(
     && data[rok] = SELECTEDVALUE(data[rok])),
 data[maximalni_teplota]),"TOMATO")
 
+_________________________________________________________________________
+
+
+32 maximalni mesicni srazky = 
+-- suma srazek v danem mesici, roce, lokalite
+VAR suma_srazek = ROUND(SUM(data[srazky]),2)
+VAR tabulka_mesicnich_srazek =
+ROUND(
+MAXX(
+ADDCOLUMNS(
+    ALL(data[mesic]),
+"mesicni srazky",
+CALCULATE(SUM(data[srazky]))),
+[mesicni srazky]),2)
+
+return  IF(suma_srazek = tabulka_mesicnich_srazek,"GOLD")
+
